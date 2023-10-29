@@ -81,8 +81,8 @@ class CustomDataset(Dataset):
 if __name__ == '__main__':
     # Here are few lines of code for testing
     file_path = 'seq_and_value.tsv' 
-    test_dataset = CustomDataset(file_path,0,3)
+    test_dataset = CustomDataset(file_path)
     print(test_dataset.data_size())
-    print(test_dataset.data)
+    print(test_dataset.data[ :3])
     print(test_dataset.inverse_transform(test_dataset.data[0][1].astype(float)))
 
